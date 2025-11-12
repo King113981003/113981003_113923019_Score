@@ -18,6 +18,35 @@ Original file is located at
 
 score_strings = input().split()
 
+
+
+failed_count = 0
+max=0
+min=100
+for score_str in score_strings:
+
+    score = int(score_str)
+
+    if score < 60:
+
+        failed_count += 1
+    if max < score:
+        max = score
+    if min > score:
+        min = score
+
+print(failed_count)
+print(max, min)
+
+score_integers = [int(s) for s in score_strings]
+positive_scores = [score for score in score_integers if score > 0]
+
+print(f"Original score strings: {score_strings}")
+print(f"Converted to positive integers: {positive_scores}")
+
+
+score_strings = input().split()
+
 failed_count = 0
 total = 0
 
